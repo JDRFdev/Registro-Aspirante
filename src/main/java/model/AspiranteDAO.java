@@ -21,11 +21,11 @@ public class AspiranteDAO {
         listaAspirantes.add(aspirante);
     }
 
-    public List<AspiranteDTO> obtenerTodos() {
+    static public List<AspiranteDTO> obtenerTodos() {
         return listaAspirantes;
     }
 
-    public List<String> obtenerProgramasOfertados() {
+    static public List<String> obtenerProgramasOfertados() {
         return programas;
     }
 }
