@@ -18,6 +18,7 @@ public class AspiranteBean implements Serializable {
 	
 	public void registrar() {
 		this.service.registrar(nuevoAspirante);
+		 this.nuevoAspirante = new AspiranteDTO();
 	} 
 	public List<AspiranteDTO> obtenerAspirantes(){
 		return this.service.obtenerAspirantes();
