@@ -4,13 +4,16 @@ import java.util.List;
 
 import model.AspiranteDAO;
 import model.AspiranteDTO;
+import model.ProgramaDAO;
+import model.ProgramaDTO;
 
 public class AspiranteService {
 
 	private AspiranteDAO repositorioAspirantes;
-	
+	private ProgramaDAO repositorioProgramas;
 	public AspiranteService() {
 		this.repositorioAspirantes=new AspiranteDAO();
+		this.repositorioProgramas=new ProgramaDAO();
 	}
 	public void registrar(AspiranteDTO aspirante) {
 		this.repositorioAspirantes.registrarAspirante(aspirante);
@@ -18,7 +21,7 @@ public class AspiranteService {
 	public List<AspiranteDTO> obtenerAspirantes(){
 		return this.repositorioAspirantes.obtenerTodos();
 	}
-	public List<String> obtenerProgramas(){
-		return this.repositorioAspirantes.obtenerProgramasOfertados();
+	public List<ProgramaDTO> obtenerProgramas(){
+		return this.repositorioProgramas.obtenerProgramasOfertados();
 	}
 }
